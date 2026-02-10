@@ -52,10 +52,14 @@ footer {
 .surpresa {
     cursor: pointer;
     font-weight: bold;
+    color: #333;
 }
 
-.surpresa:hover::after {
-    content: " Eu te amo, mãe 💖";
+.surpresa span {
+    display: none;
     color: #ff69b4;
 }
 
+.surpresa:hover span {
+    display: inline;
+}
