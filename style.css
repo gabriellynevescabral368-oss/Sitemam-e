@@ -1,3 +1,24 @@
+<script>
+setInterval(() => {
+  const heart = document.createElement("div");
+  heart.innerText = "💖";
+  heart.style.position = "fixed";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.top = "100vh";
+  heart.style.fontSize = "20px";
+  heart.style.animation = "subir 4s linear";
+  document.body.appendChild(heart);
+
+  setTimeout(() => heart.remove(), 4000);
+}, 800);
+</script>
+
+<style>
+@keyframes subir {
+  from { transform: translateY(0); opacity: 1; }
+  to { transform: translateY(-120vh); opacity: 0; }
+}
+</style>
 body {
     background-color: #fff0f5;
     font-family: Arial, sans-serif;
@@ -27,4 +48,13 @@ footer {
     color: white;
     padding: 10px;
     margin-top: 30px;
+}
+.surpresa {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.surpresa:hover::after {
+    content: " Eu te amo, mãe 💖";
+    color: #ff69b4;
 }
